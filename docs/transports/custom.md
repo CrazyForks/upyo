@@ -68,9 +68,9 @@ This approach provides predictable error handling and prevents uncaught
 exceptions from breaking your application flow.
 
 **Support cancellation through [`AbortSignal`].** Modern applications need the
-ability to cancel long-running operations.  Check `options?.signal?.throwIfAborted()`
-at strategic points in your implementation, especially before expensive
-network operations.
+ability to cancel long-running operations.  Check
+`options?.signal?.throwIfAborted()` at strategic points in your implementation,
+especially before expensive network operations.
 
 **Return descriptive receipts.** Success receipts should include a meaningful
 `messageId` that can be used for tracking and debugging.  Failure receipts
@@ -175,16 +175,18 @@ Let's break down the key implementation details:
 provide sensible defaults while requiring only essential configuration.
 This makes the transport easy to use while remaining flexible.
 
-**Cancellation checking:** Notice how we check `options?.signal?.throwIfAborted()`
-at two critical points: before starting the operation and before making the
-network request. This ensures operations can be cancelled promptly.
+**Cancellation checking:** Notice how we check
+`options?.signal?.throwIfAborted()` at two critical points: before starting the
+operation and before making the network request. This ensures operations can be
+cancelled promptly.
 
 **Error conversion:** All errors are caught and converted to failed `Receipt`
 objects. This prevents exceptions from propagating and provides a consistent
 error handling experience.
 
 **HTTP error handling:** The code distinguishes between HTTP errors (4xx/5xx
-status codes) and network errors, providing specific error messages for each case.
+status codes) and network errors, providing specific error messages for each
+case.
 
 The `~Transport.sendMany()` implementation uses a simple pattern that delegates
 to the `~Transport.send()` method for each message.  This approach is
@@ -197,7 +199,10 @@ Advanced patterns
 
 ### Resource cleanup
 
-Some transports need to manage persistent resources like connection pools, file handles, or background timers. Implementing the `AsyncDisposable` interface ensures proper cleanup and integrates with modern JavaScript resource management patterns.
+Some transports need to manage persistent resources like connection pools, file
+handles, or background timers. Implementing the `AsyncDisposable` interface
+ensures proper cleanup and integrates with modern JavaScript resource
+management patterns.
 
 ~~~~ typescript {22-24} twoslash
 import type { Message, Receipt, Transport, TransportOptions } from "@upyo/core";
@@ -242,7 +247,8 @@ scope, even if an exception occurs.
 
 Network operations can fail due to temporary issues like network congestion,
 server overload, or brief service outages. Implementing retry logic with
-exponential backoff makes your transport more resilient in production environments.
+exponential backoff makes your transport more resilient in production
+environments.
 
 ~~~~ typescript twoslash
 async function sendWithRetry(
@@ -285,7 +291,8 @@ async function sendWithRetry(
 The retry function implements several important patterns: it avoids retrying
 client errors (4xx status codes) since these indicate problems with the
 request itself, uses exponential backoff to avoid overwhelming struggling
-servers, and provides a configurable maximum retry count to prevent infinite loops.
+servers, and provides a configurable maximum retry count to prevent infinite
+loops.
 
 > [!CAUTION]
 > Never retry 4xx client errors as these indicate problems with your request
@@ -334,7 +341,9 @@ the Upyo ecosystem and provides a reliable experience for users.
 
 ### Handle cancellation properly
 
-Cancellation support is essential for responsive applications. Users should be able to cancel email operations that are taking too long or are no longer needed.
+Cancellation support is essential for responsive applications. Users should be
+able to cancel email operations that are taking too long or are no longer
+needed.
 
 ~~~~ typescript
 // Check before expensive operations
@@ -368,7 +377,8 @@ async send(message: Message): Promise<Receipt> {
 }
 ~~~~
 
-This approach provides predictable error handling and allows users to handle errors consistently across all transports.
+This approach provides predictable error handling and allows users to handle
+errors consistently across all transports.
 
 ### Use web standards for cross-runtime compatibility
 
@@ -385,7 +395,8 @@ setTimeout()
 import http from "node:http"
 ~~~~
 
-Avoid runtime-specific APIs and prefer web standards that are universally supported.
+Avoid runtime-specific APIs and prefer web standards that are universally
+supported.
 
 ### Provide sensible configuration defaults
 
@@ -412,7 +423,7 @@ ecosystem and provide a consistent, reliable experience for users.
 
 
 Sharing your transport
----------------------
+----------------------
 
 If you've built a transport that others might find useful, consider sharing
 it with the community! There are several ways to make your custom transport

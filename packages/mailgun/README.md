@@ -8,10 +8,10 @@
 
 [Mailgun] transport for the [Upyo] email library.
 
-[JSR]: https://jsr.io/@upyo/mailgun
 [JSR badge]: https://jsr.io/badges/@upyo/mailgun
-[npm]: https://www.npmjs.com/package/@upyo/mailgun
+[JSR]: https://jsr.io/@upyo/mailgun
 [npm badge]: https://img.shields.io/npm/v/@upyo/mailgun?logo=npm
+[npm]: https://www.npmjs.com/package/@upyo/mailgun
 [Mailgun]: https://www.mailgun.com/
 [Upyo]: https://upyo.org/
 

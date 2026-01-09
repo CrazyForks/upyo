@@ -319,10 +319,13 @@ This project follows test-driven development (TDD) practices:
 
  -  Do not use Conventional Commits (no `fix:`, `feat:`, etc. prefixes).
     Keep the first line under 50 characters when possible.
+
  -  Focus on *why* the change was made, not just *what* changed.
+
  -  When referencing issues or PRs, use permalink URLs instead of just
     numbers (e.g., `#123`).  This preserves context if the repository
     is moved later.
+
  -  When listing items after a colon, add a blank line after the colon:
 
     ~~~~
@@ -352,27 +355,27 @@ these conventions:
 
  -  *Version sections*: Each release is a top-level section:
 
-    ~~~~
+    ~~~~ markdown
     Version 0.1.0
     -------------
     ~~~~
 
  -  *Unreleased version*: The next version should start with:
 
-    ~~~~
+    ~~~~ markdown
     To be released.
     ~~~~
 
  -  *Released versions*: Use a release-date line right after the version header:
 
-    ~~~~
+    ~~~~ markdown
     Released on December 30, 2025.
     ~~~~
 
     If you need to add brief context (e.g., initial release), keep it on the
     same sentence:
 
-    ~~~~
+    ~~~~ markdown
     Released on August 21, 2025.  Initial release.
     ~~~~
 
@@ -436,6 +439,7 @@ Code style
 
  -  All exported APIs must have JSDoc comments describing their purpose,
     parameters, and return values.
+
  -  For APIs added in a specific version, include the `@since` tag with the
     version number:
 
@@ -524,7 +528,8 @@ When writing documentation in English:
  -  Use sentence case for titles and headings (capitalize only the first word
     and proper nouns), not Title Case.
  -  Use curly quotation marks ("like this") for quotations in English prose.
-    Use straight apostrophes (like this: '...') for contractions and possessives.
+    Use straight apostrophes (like this: '...') for contractions and
+    possessives.
  -  Use *italics* for emphasis rather than **bold**.  Do not overuse emphasis.
  -  Avoid common LLM writing patterns: overusing em dashes, excessive emphasis,
     compulsive summarizing and categorizing, and rigid textbook-like structure
@@ -543,7 +548,7 @@ documentation:
  -  *Setext-style headings*: Use underline-style for the document title
     (with `=`) and sections (with `-`):
 
-    ~~~~
+    ~~~~ markdown
     Document Title
     ==============
 
@@ -553,14 +558,14 @@ documentation:
 
  -  *ATX-style headings*: Use only for subsections within a section:
 
-    ~~~~
+    ~~~~ markdown
     ### Subsection Name
     ~~~~
 
  -  *Heading case*: Use sentence case (capitalize only the first word and
     proper nouns) rather than Title Case:
 
-    ~~~~
+    ~~~~ markdown
     Development commands    ← Correct
     Development Commands    ← Incorrect
     ~~~~
@@ -576,10 +581,12 @@ documentation:
 ### Lists
 
  -  Use ` -  ` (space-hyphen-two spaces) for unordered list items
+
  -  Indent nested items with 4 spaces
+
  -  Align continuation text with the item content:
 
-    ~~~~
+    ~~~~ markdown
      -  *First item*: Description text that continues
         on the next line with proper alignment
      -  *Second item*: Another item
@@ -588,9 +595,10 @@ documentation:
 ### Code blocks
 
  -  Use four tildes (`~~~~`) for code fences instead of backticks
+
  -  Always specify the language identifier:
 
-    ~~~~~
+    ~~~~~ markdown
     ~~~~ typescript
     const example = "Hello, world!";
     ~~~~
@@ -598,7 +606,7 @@ documentation:
 
  -  For shell commands, use `bash`:
 
-    ~~~~~
+    ~~~~~ markdown
     ~~~~ bash
     deno test
     ~~~~
@@ -608,9 +616,10 @@ documentation:
 
  -  Use reference-style links placed at the *end of each section*
     (not at document end)
+
  -  Format reference links with consistent spacing:
 
-    ~~~~
+    ~~~~ markdown
     See the [Nodemailer] documentation for SMTP reference.
 
     [Nodemailer]: https://nodemailer.com/
@@ -628,7 +637,7 @@ Use GitHub-style alert blocks for important information:
 
 Continue alert content on subsequent lines with `>`:
 
-~~~~
+~~~~ markdown
 > [!CAUTION]
 > This feature is experimental and may change in future versions.
 ~~~~
@@ -663,7 +672,7 @@ beyond standard Markdown.
 Use the `twoslash` modifier to enable TypeScript type checking and hover
 information in code blocks:
 
-~~~~~
+~~~~~ markdown
 ~~~~ typescript twoslash
 import { SmtpTransport } from "@upyo/smtp";
 
@@ -680,7 +689,7 @@ When code examples need variables that shouldn't be shown to readers,
 declare them *before* the `// ---cut-before---` directive.  Content before
 this directive is compiled but hidden from display:
 
-~~~~~
+~~~~~ markdown
 ~~~~ typescript twoslash
 const emailContent: string = "";
 // ---cut-before---
@@ -705,7 +714,7 @@ checks the entire block including the hidden fixture.
 
 For functions that need to exist but shouldn't be shown, use `declare`:
 
-~~~~~
+~~~~~ markdown
 ~~~~ typescript twoslash
 declare function getEmailTemplate(): string;
 // ---cut-before---
@@ -720,7 +729,7 @@ const template = getEmailTemplate();
 VitePress supports definition lists for documenting terms, options,
 or properties:
 
-~~~~
+~~~~ markdown
 `host`
 :   The SMTP server hostname
 
@@ -739,7 +748,7 @@ and the description indented below.
 Use code groups to show the same content for different package managers
 or environments:
 
-~~~~
+~~~~~ markdown
 ::: code-group
 
 ~~~~ bash [Deno]
@@ -755,7 +764,7 @@ pnpm add @upyo/smtp
 ~~~~
 
 :::
-~~~~
+~~~~~
 
 ### Links
 

@@ -8,10 +8,10 @@
 
 [SendGrid] transport for the [Upyo] email library.
 
-[JSR]: https://jsr.io/@upyo/sendgrid
 [JSR badge]: https://jsr.io/badges/@upyo/sendgrid
-[npm]: https://www.npmjs.com/package/@upyo/sendgrid
+[JSR]: https://jsr.io/@upyo/sendgrid
 [npm badge]: https://img.shields.io/npm/v/@upyo/sendgrid?logo=npm
+[npm]: https://www.npmjs.com/package/@upyo/sendgrid
 [SendGrid]: https://sendgrid.com/
 [Upyo]: https://upyo.org/
 

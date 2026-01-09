@@ -9,14 +9,15 @@ Mock transport
 
 The mock transport is a specialized testing utility that simulates email sending
 without actually delivering messages. Instead of connecting to email servers
-or APIs, it stores all “sent” messages in memory where they can be inspected,
-verified, and manipulated during testing. This makes it invaluable for unit
-testing, integration testing, and development workflows where you need to verify
-email functionality without sending real emails.
+or APIs, it stores all “sent” messages in memory where they can be
+inspected, verified, and manipulated during testing. This makes it invaluable
+for unit testing, integration testing, and development workflows where you need
+to verify email functionality without sending real emails.
 
 Upyo provides a comprehensive mock transport through the *@upyo/mock* package,
 offering configurable behavior simulation, message querying capabilities,
-async testing utilities, and full compatibility with all Upyo transport features.
+async testing utilities, and full compatibility with all Upyo transport
+features.
 
 
 Installation
@@ -143,8 +144,8 @@ Testing specific failure scenarios
 ----------------------------------
 
 For testing specific error conditions, you can configure the mock transport
-to fail in controlled ways. This is essential for verifying that your application
-handles various email service errors gracefully:
+to fail in controlled ways. This is essential for verifying that your
+application handles various email service errors gracefully:
 
 ~~~~ typescript twoslash
 import { createMessage } from "@upyo/core";

@@ -135,7 +135,7 @@ infrastructure in-house.
 
 
 Message organization and batch sending
----------------------------------------
+--------------------------------------
 
 Plunk supports message tagging for better organization and analytics.
 The transport also provides efficient batch processing for sending multiple
@@ -234,7 +234,7 @@ inbox placement of urgent messages.
 
 
 Cancellation and error handling
---------------------------------
+-------------------------------
 
 The Plunk transport supports request cancellation using AbortSignal and
 provides comprehensive error handling for various failure scenarios:

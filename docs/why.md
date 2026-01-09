@@ -8,17 +8,18 @@ description: >-
 Why Upyo?
 =========
 
-Upyo[^1] is a simple and modern email library that works across multiple runtimes
-including Node.js, Deno, Bun, and edge functions. It provides a universal
-interface for email delivery, making it easy to send emails with minimal setup.
-
-[^1]: Upyo (pronounced /oo-pee-oh/) comes from the Sino-Korean word
-      [郵票] (upyo), meaning *postage stamp*.
-      The name reflects the library's purpose: just as postage stamps enable
-      mail delivery across different postal systems, Upyo enables email delivery
-      across different runtime environments and service providers.
+Upyo[^1] is a simple and modern email library that works across multiple
+runtimes including Node.js, Deno, Bun, and edge functions. It provides a
+universal interface for email delivery, making it easy to send emails with
+minimal setup.
 
 [郵票]: https://en.wiktionary.org/wiki/%E9%83%B5%E7%A5%A8#Noun_2
+
+[^1]: Upyo (pronounced /oo-pee-oh/) comes from the Sino-Korean word [郵票]
+      (upyo), meaning *postage stamp*. The name reflects the library's purpose:
+      just as postage stamps enable mail delivery across different postal
+      systems, Upyo enables email delivery across different runtime environments
+      and service providers.
 
 
 Cross-runtime compatibility
@@ -168,8 +169,8 @@ Observability
 
 Upyo integrates seamlessly with [OpenTelemetry](./transports/opentelemetry.md)
 to provide comprehensive observability for your email operations. Monitor
-delivery rates, track performance, and debug issues with distributed tracing—all
-without changing your existing code:
+delivery rates, track performance, and debug issues with distributed
+tracing—all without changing your existing code:
 
 ~~~~ typescript twoslash
 import { createMessage } from "@upyo/core";
@@ -252,54 +253,53 @@ N/A
 #### Runtime support
 
 | Runtime        | Upyo | [Nodemailer] | [Resend] | [SendGrid] | [Mailgun] |
-|----------------|:----:|:------------:|:--------:|:----------:|:---------:|
-| Node.js        |  ✅  |      ✅      |    ✅    |     ✅     |     ✅    |
-| Deno           |  ✅  |      ❌      |    ✅    |     ✅     |     ✅    |
-| Bun            |  ✅  |      ❌      |    ✅    |     ✅     |     ✅    |
-| Edge functions |  ✅  |      ❌      |    ✅    |     ✅     |     ✅    |
+| -------------- | :--: | :----------: | :------: | :--------: | :-------: |
+| Node.js        | ✅    | ✅            | ✅        | ✅          | ✅         |
+| Deno           | ✅    | ❌            | ✅        | ✅          | ✅         |
+| Bun            | ✅    | ❌            | ✅        | ✅          | ✅         |
+| Edge functions | ✅    | ❌            | ✅        | ✅          | ✅         |
+
+#### Transport options
+
+| Transport | Upyo | [Nodemailer] | [Resend] | [SendGrid] | [Mailgun] |
+| --------- | :--: | :----------: | :------: | :--------: | :-------: |
+| SMTP      | ✅    | ✅            | ❌        | ❌          | ❌         |
+| HTTP API  | ✅    | ❌[^2]        | ✅        | ✅          | ✅         |
+
+#### Core features
+
+| Feature             | Upyo | [Nodemailer] | [Resend] | [SendGrid] | [Mailgun] |
+| ------------------- | :--: | :----------: | :------: | :--------: | :-------: |
+| Connection pooling  | ✅    | ✅            | N/A      | N/A        | N/A       |
+| Attachments         | ✅    | ✅            | ✅        | ✅          | ✅         |
+| Inline images       | ✅    | ✅            | ✅        | ✅          | ✅         |
+| HTML and plain text | ✅    | ✅            | ✅        | ✅          | ✅         |
+| Batch sending       | ✅    | ❌            | ✅        | ✅          | ✅         |
+
+#### Advanced features
+
+| Feature                  | Upyo | [Nodemailer] | [Resend] | [SendGrid] | [Mailgun] |
+| ------------------------ | :--: | :----------: | :------: | :--------: | :-------: |
+| DKIM signing             | ✅    | ✅            | N/A      | N/A        | N/A       |
+| OAuth 2.0 authentication | 🔜    | ✅            | N/A      | N/A        | N/A       |
+| Template engine          | ❌    | ❌[^2]        | ✅        | ✅          | ✅         |
+
+#### Developer experience
+
+| Feature                   | Upyo | [Nodemailer] | [Resend] | [SendGrid] | [Mailgun] |
+| ------------------------- | :--: | :----------: | :------: | :--------: | :-------: |
+| Built-in mock transport   | ✅    | ❌[^3]        | ❌        | ❌          | ❌         |
+| OpenTelemetry integration | ✅    | ❌            | ❌        | ❌          | ❌         |
+| Provider abstraction      | ✅    | ❌            | ❌        | ❌          | ❌         |
+| Zero dependencies         | ✅    | ✅            | ❌        | ❌          | ❌         |
+| Native TypeScript         | ✅    | ❌[^4]        | ✅        | ✅          | ✅         |
 
 [Nodemailer]: https://nodemailer.com/
 [Resend]: https://resend.com/
 [SendGrid]: https://sendgrid.com/
 [Mailgun]: https://www.mailgun.com/
 
-#### Transport options
-
-| Transport | Upyo | [Nodemailer] | [Resend] | [SendGrid] | [Mailgun] |
-|-----------|:----:|:------------:|:--------:|:----------:|:---------:|
-| SMTP      |  ✅  |      ✅      |    ❌    |     ❌     |     ❌    |
-| HTTP API  |  ✅  |      ❌[^2]  |    ✅    |     ✅     |     ✅    |
-
 [^2]: Available via community plugins.
-
-#### Core features
-
-| Feature             | Upyo | [Nodemailer] | [Resend] | [SendGrid] | [Mailgun] |
-|---------------------|:----:|:------------:|:--------:|:----------:|:---------:|
-| Connection pooling  |  ✅  |      ✅      |    N/A   |     N/A    |    N/A    |
-| Attachments         |  ✅  |      ✅      |    ✅    |     ✅     |    ✅     |
-| Inline images       |  ✅  |      ✅      |    ✅    |     ✅     |    ✅     |
-| HTML and plain text |  ✅  |      ✅      |    ✅    |     ✅     |    ✅     |
-| Batch sending       |  ✅  |      ❌      |    ✅    |     ✅     |    ✅     |
-
-#### Advanced features
-
-| Feature               | Upyo | [Nodemailer] | [Resend] | [SendGrid] | [Mailgun] |
-|-----------------------|:----:|:------------:|:--------:|:----------:|:---------:|
-| DKIM signing          |  ✅  |      ✅      |    N/A   |     N/A    |    N/A    |
-| OAuth 2.0 authentication | 🔜 |     ✅      |    N/A   |     N/A    |    N/A    |
-| Template engine       |  ❌  |      ❌[^2]  |    ✅    |     ✅     |    ✅     |
-
-#### Developer experience
-
-| Feature                   | Upyo | [Nodemailer] | [Resend] | [SendGrid] | [Mailgun] |
-|---------------------------|:----:|:------------:|:--------:|:----------:|:---------:|
-| Built-in mock transport   |  ✅  |      ❌[^3]  |    ❌    |     ❌     |     ❌    |
-| OpenTelemetry integration |  ✅  |      ❌      |    ❌    |     ❌     |     ❌    |
-| Provider abstraction      |  ✅  |      ❌      |    ❌    |     ❌     |     ❌    |
-| Zero dependencies         |  ✅  |      ✅      |    ❌    |     ❌     |     ❌    |
-| Native TypeScript         |  ✅  |      ❌[^4]  |    ✅    |     ✅     |     ✅    |
-
 [^3]: Stream transport can be used for similar purposes.
 [^4]: Requires `@types/nodemailer` package.
 

@@ -356,11 +356,12 @@ const transport = new SesTransport({
 ~~~~
 
 Configuration sets enable features like:
-- Event publishing to CloudWatch, Kinesis, or SNS
-- Reputation tracking and automatic bounce handling
-- IP pool management for dedicated sending
-- Click and open tracking integration
-- Suppression list management
+
+ -  Event publishing to CloudWatch, Kinesis, or SNS
+ -  Reputation tracking and automatic bounce handling
+ -  IP pool management for dedicated sending
+ -  Click and open tracking integration
+ -  Suppression list management
 
 Consult the [SES Configuration Sets documentation] for detailed setup
 instructions and available features.

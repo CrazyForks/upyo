@@ -16,23 +16,23 @@ Upyo transport implementations use.  It defines the common `Message`, `Address`,
 different email providers while maintaining consistent type safety and
 error handling.
 
-[JSR]: https://jsr.io/@upyo/core
 [JSR badge]: https://jsr.io/badges/@upyo/core
-[npm]: https://www.npmjs.com/package/@upyo/core
+[JSR]: https://jsr.io/@upyo/core
 [npm badge]: https://img.shields.io/npm/v/@upyo/core?logo=npm
+[npm]: https://www.npmjs.com/package/@upyo/core
 [Upyo]: https://upyo.org/
 
 
 Features
 --------
 
- - *Universal types*: Common interfaces for all email transports
- - *Type-safe messaging*: Comprehensive TypeScript definitions for email
-   messages
- - *Attachment support*: File attachment handling
- - *Cross-runtime compatibility*: Works on Node.js, Deno, Bun,
-   and edge functions
- - *Zero dependencies*: Lightweight with no external dependencies
+ -  *Universal types*: Common interfaces for all email transports
+ -  *Type-safe messaging*: Comprehensive TypeScript definitions for email
+    messages
+ -  *Attachment support*: File attachment handling
+ -  *Cross-runtime compatibility*: Works on Node.js, Deno, Bun,
+    and edge functions
+ -  *Zero dependencies*: Lightweight with no external dependencies
 
 
 Installation
@@ -156,17 +156,17 @@ implementations:
 [npm:@upyo/smtp]: https://www.npmjs.com/package/@upyo/smtp
 [jsr:@upyo/mailgun]: https://jsr.io/@upyo/mailgun
 [npm:@upyo/mailgun]: https://www.npmjs.com/package/@upyo/mailgun
+[Mailgun]: https://www.mailgun.com/
 [jsr:@upyo/sendgrid]: https://jsr.io/@upyo/sendgrid
 [npm:@upyo/sendgrid]: https://www.npmjs.com/package/@upyo/sendgrid
+[SendGrid]: https://sendgrid.com/
 [jsr:@upyo/ses]: https://jsr.io/@upyo/ses
 [npm:@upyo/ses]: https://www.npmjs.com/package/@upyo/ses
+[Amazon SES]: https://aws.amazon.com/ses/
 [jsr:@upyo/mock]: https://jsr.io/@upyo/mock
 [npm:@upyo/mock]: https://www.npmjs.com/package/@upyo/mock
 [jsr:@upyo/opentelemetry]: https://jsr.io/@upyo/opentelemetry
 [npm:@upyo/opentelemetry]: https://www.npmjs.com/package/@upyo/opentelemetry
-[Mailgun]: https://www.mailgun.com/
-[SendGrid]: https://sendgrid.com/
-[Amazon SES]: https://aws.amazon.com/ses/
 [OpenTelemetry]: https://opentelemetry.io/
 
 

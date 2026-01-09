@@ -59,7 +59,8 @@ Getting started
 
 Before using the Resend transport, you'll need a Resend account and an API
 key. Resend provides API keys through their dashboard at [resend.com/api-keys],
-where you can create keys with specific permissions for your application's needs.
+where you can create keys with specific permissions for your application's
+needs.
 
 ~~~~ typescript twoslash
 import { ResendTransport } from "@upyo/resend";
@@ -136,10 +137,12 @@ for await (const receipt of transport.sendMany(messages)) {
 
 The transport automatically determines the optimal sending strategy:
 
-- **≤100 messages without attachments/tags**: Uses Resend's batch API for fastest delivery
-- **>100 messages**: Automatically chunks into multiple batch requests
-- **Messages with attachments or tags**: Falls back to individual requests
-- **Mixed scenarios**: Intelligently separates batch-compatible from individual messages
+ -  **≤100 messages without attachments/tags**: Uses Resend's batch API for
+    fastest delivery
+ -  **>100 messages**: Automatically chunks into multiple batch requests
+ -  **Messages with attachments or tags**: Falls back to individual requests
+ -  **Mixed scenarios**: Intelligently separates batch-compatible from individual
+    messages
 
 This optimization happens transparently, ensuring maximum performance while
 maintaining full feature compatibility.
@@ -284,9 +287,10 @@ const testMessage = createMessage({
 const receipt = await testTransport.send(testMessage);
 ~~~~
 
-For local development, you can use Resend's test domains (`onboarding@resend.dev`)
-which accept emails but don't deliver them to real recipients. This allows you
-to test the complete email sending workflow without affecting real users.
+For local development, you can use Resend's test domains
+(`onboarding@resend.dev`) which accept emails but don't deliver them to real
+recipients. This allows you to test the complete email sending workflow without
+affecting real users.
 
 > [!TIP]
 > Resend provides excellent debugging tools through their dashboard where you

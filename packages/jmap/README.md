@@ -9,14 +9,14 @@
 [JMAP] transport for the [Upyo] email library.  Implements [RFC 8620] (core)
 and [RFC 8621] (mail) for sending emails via JMAP protocol.
 
-[JSR]: https://jsr.io/@upyo/jmap
 [JSR badge]: https://jsr.io/badges/@upyo/jmap
-[npm]: https://www.npmjs.com/package/@upyo/jmap
+[JSR]: https://jsr.io/@upyo/jmap
 [npm badge]: https://img.shields.io/npm/v/@upyo/jmap?logo=npm
+[npm]: https://www.npmjs.com/package/@upyo/jmap
 [JMAP]: https://jmap.io/
+[Upyo]: https://upyo.org/
 [RFC 8620]: https://www.rfc-editor.org/rfc/rfc8620
 [RFC 8621]: https://www.rfc-editor.org/rfc/rfc8621
-[Upyo]: https://upyo.org/
 
 
 Features
@@ -81,23 +81,23 @@ Configuration
 
 Either `bearerToken` or `basicAuth` must be provided:
 
-| Option | Type | Description |
-|--------|------|-------------|
-| `sessionUrl` | `string` | JMAP session URL (e.g., `https://server/.well-known/jmap`) |
-| `bearerToken` | `string` | Bearer token for authentication |
-| `basicAuth` | `{ username: string, password: string }` | Basic authentication credentials |
+| Option        | Type                                     | Description                                                |
+| ------------- | ---------------------------------------- | ---------------------------------------------------------- |
+| `sessionUrl`  | `string`                                 | JMAP session URL (e.g., `https://server/.well-known/jmap`) |
+| `bearerToken` | `string`                                 | Bearer token for authentication                            |
+| `basicAuth`   | `{ username: string, password: string }` | Basic authentication credentials                           |
 
 ### Optional Options
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `accountId` | `string` | Auto-detected | JMAP account ID (defaults to first account with mail capability) |
-| `identityId` | `string` | Auto-resolved | Identity ID for sending (defaults to identity matching sender email) |
-| `timeout` | `number` | `30000` | Request timeout in milliseconds |
-| `retries` | `number` | `3` | Number of retry attempts for failed requests |
-| `sessionCacheTtl` | `number` | `300000` | Session cache TTL in milliseconds (5 minutes) |
-| `headers` | `Record<string, string>` | `{}` | Additional HTTP headers to include in requests |
-| `baseUrl` | `string` | - | Base URL for rewriting session URLs (useful when server returns internal hostnames) |
+| Option            | Type                     | Default       | Description                                                                         |
+| ----------------- | ------------------------ | ------------- | ----------------------------------------------------------------------------------- |
+| `accountId`       | `string`                 | Auto-detected | JMAP account ID (defaults to first account with mail capability)                    |
+| `identityId`      | `string`                 | Auto-resolved | Identity ID for sending (defaults to identity matching sender email)                |
+| `timeout`         | `number`                 | `30000`       | Request timeout in milliseconds                                                     |
+| `retries`         | `number`                 | `3`           | Number of retry attempts for failed requests                                        |
+| `sessionCacheTtl` | `number`                 | `300000`      | Session cache TTL in milliseconds (5 minutes)                                       |
+| `headers`         | `Record<string, string>` | `{}`          | Additional HTTP headers to include in requests                                      |
+| `baseUrl`         | `string`                 | -             | Base URL for rewriting session URLs (useful when server returns internal hostnames) |
 
 
 Error Handling

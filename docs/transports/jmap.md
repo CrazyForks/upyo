@@ -447,5 +447,3 @@ JMAP implementations include:
 [Cyrus IMAP]: https://www.cyrusimap.org/
 [Fastmail]: https://www.fastmail.com/
 [Apache James]: https://james.apache.org/
-
-

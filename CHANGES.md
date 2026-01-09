@@ -22,6 +22,8 @@ Released on December 25, 2025. Happy Holidays!
     object.  If not provided, transports may generate their own key internally
     (behavior varies by transport implementation).
 
+[#16]: https://github.com/dahlia/upyo/issues/16
+
 ### @upyo/smtp
 
  -  Added DKIM (DomainKeys Identified Mail) signing support.  [[#18]]
@@ -88,8 +90,6 @@ Released on December 18, 2025.
     it as an HTTP request header.  This fix moves the idempotency key to the
     proper location.
 
-[#16]: https://github.com/dahlia/upyo/issues/16
-
 
 Version 0.3.3
 -------------
@@ -114,9 +114,11 @@ Released on December 12, 2025.
  -  Fixed headers serialization issue on edge runtimes.  [[#15]]
 
     The SES transport now converts the `Headers` object to a plain object
-    before passing to `fetch()`, which resolves “Missing Authentication Token”
-    errors on edge runtimes like Bunny CDN Edge that don't properly serialize
-    `Headers` objects.
+    before passing to `fetch()`, which resolves “Missing Authentication
+    Token” errors on edge runtimes like Bunny CDN Edge that don't properly
+    serialize `Headers` objects.
+
+[#15]: https://github.com/dahlia/upyo/issues/15
 
 
 Version 0.3.1
@@ -131,6 +133,8 @@ Released on November 3, 2025.
     that advertise this capability (such as Protonmail, Office 365, and others).
     This allows using port 587 with `secure: false` for automatic encryption
     upgrade.  [[#14]]
+
+[#14]: https://github.com/dahlia/upyo/issues/14
 
 
 Version 0.3.0
@@ -215,11 +219,9 @@ Released on December 12, 2025.
  -  Fixed headers serialization issue on edge runtimes.  [[#15]]
 
     The SES transport now converts the `Headers` object to a plain object
-    before passing to `fetch()`, which resolves “Missing Authentication Token”
-    errors on edge runtimes like Bunny CDN Edge that don't properly serialize
-    `Headers` objects.
-
-[#15]: https://github.com/dahlia/upyo/issues/15
+    before passing to `fetch()`, which resolves “Missing Authentication
+    Token” errors on edge runtimes like Bunny CDN Edge that don't properly
+    serialize `Headers` objects.
 
 
 Version 0.2.2
@@ -334,8 +336,6 @@ Released on Nowember 3, 2025.
     that advertise this capability (such as Protonmail, Office 365, and others).
     This allows using port 587 with `secure: false` for automatic encryption
     upgrade.  [[#14]]
-
-[#14]: https://github.com/dahlia/upyo/issues/14
 
 
 Version 0.1.1

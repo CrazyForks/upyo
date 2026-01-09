@@ -57,24 +57,24 @@ strengths and use cases:
 :   Modern email service provider that offers a developer-friendly API
 
 [SendGrid](./transports/sendgrid.md)
-:    Popular email API with deliverability focus
+:   Popular email API with deliverability focus
 
 [Plunk](./transports/plunk.md)
-:    Modern, developer-friendly email service that offers both cloud-based
-     and self-hosted solutions for transactional email delivery
+:   Modern, developer-friendly email service that offers both cloud-based
+    and self-hosted solutions for transactional email delivery
 
 [Amazon SES](./transports/ses.md)
-:    Cost-effective email service for AWS users
+:   Cost-effective email service for AWS users
 
 [Mock transport](./transports/mock.md)
-:    Testing utility that captures emails without sending
+:   Testing utility that captures emails without sending
 
 If none of these fit your needs, you can also
 [create a custom transport](./transports/custom.md)
 to integrate with any email service or add specialized functionality.
 
-To get started, install the transport package for your chosen option. For example,
-to use the SMTP transport, you would install the *@upyo/smtp* package:
+To get started, install the transport package for your chosen option. For
+example, to use the SMTP transport, you would install the *@upyo/smtp* package:
 
 ::: code-group
 
@@ -103,7 +103,8 @@ bun add @upyo/smtp
 > [!CAUTION]
 > The SMTP transport currently does not support edge functions or web browsers.
 > If you need to use Upyo in these environments, consider using other transports
-> like [Mailgun](./transports/mailgun.md) or similar services that provide HTTP APIs.
+> like [Mailgun](./transports/mailgun.md) or similar services that provide HTTP
+> APIs.
 
 
 Sending your first email

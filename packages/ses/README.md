@@ -8,10 +8,10 @@
 
 [Amazon SES] transport for the [Upyo] email library.
 
-[JSR]: https://jsr.io/@upyo/ses
 [JSR badge]: https://jsr.io/badges/@upyo/ses
-[npm]: https://www.npmjs.com/package/@upyo/ses
+[JSR]: https://jsr.io/@upyo/ses
 [npm badge]: https://img.shields.io/npm/v/@upyo/ses?logo=npm
+[npm]: https://www.npmjs.com/package/@upyo/ses
 [Amazon SES]: https://aws.amazon.com/ses/
 [Upyo]: https://upyo.org/
 
@@ -205,6 +205,7 @@ Configuration
 The `authentication` field accepts one of two mutually exclusive types:
 
 #### Credentials Authentication
+
 ~~~~ typescript
 {
   type: "credentials",
@@ -214,6 +215,7 @@ The `authentication` field accepts one of two mutually exclusive types:
 ~~~~
 
 #### Session Token Authentication
+
 ~~~~ typescript
 {
   type: "session",

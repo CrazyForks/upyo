@@ -8,10 +8,10 @@
 
 [Resend] transport for the [Upyo] email library.
 
-[JSR]: https://jsr.io/@upyo/resend
 [JSR badge]: https://jsr.io/badges/@upyo/resend
-[npm]: https://www.npmjs.com/package/@upyo/resend
+[JSR]: https://jsr.io/@upyo/resend
 [npm badge]: https://img.shields.io/npm/v/@upyo/resend?logo=npm
+[npm]: https://www.npmjs.com/package/@upyo/resend
 [Resend]: https://resend.com/
 [Upyo]: https://upyo.org/
 
@@ -81,8 +81,6 @@ for await (const receipt of transport.sendMany(messages)) {
   }
 }
 ~~~~
-
-
 
 
 Configuration

@@ -9,10 +9,10 @@
 Pool transport for the [Upyo] email library with load balancing and failover
 strategies for combining multiple email providers.
 
-[JSR]: https://jsr.io/@upyo/pool
 [JSR badge]: https://jsr.io/badges/@upyo/pool
-[npm]: https://www.npmjs.com/package/@upyo/pool
+[JSR]: https://jsr.io/@upyo/pool
 [npm badge]: https://img.shields.io/npm/v/@upyo/pool?logo=npm
+[npm]: https://www.npmjs.com/package/@upyo/pool
 [Upyo]: https://upyo.org/
 
 
@@ -219,18 +219,18 @@ Configuration
 
 ### `PoolConfig`
 
-| Property            | Type                                                                    | Required | Default              | Description                                                       |
-|---------------------|-------------------------------------------------------------------------|----------|----------------------|-------------------------------------------------------------------|
-| `strategy`          | `"round-robin" | "weighted" | "priority" | "selector-based" | Strategy` | Yes      |                      | The strategy for selecting transports                             |
-| `transports`        | `TransportEntry[]`                                                      | Yes      |                      | Array of transport configurations                                 |
-| `maxRetries`        | `number`                                                                | No       | Number of transports | Maximum retry attempts on failure                                 |
-| `timeout`           | `number`                                                                | No       |                      | Timeout in milliseconds for each send attempt                     |
-| `continueOnSuccess` | `boolean`                                                               | No       | `false`              | Continue trying transports after success (selector strategy only) |
+| Property            | Type                                                                        | Required | Default              | Description                                                       |
+| ------------------- | --------------------------------------------------------------------------- | -------- | -------------------- | ----------------------------------------------------------------- |
+| `strategy`          | `"round-robin" \| "weighted" \| "priority" \| "selector-based" \| Strategy` | Yes      |                      | The strategy for selecting transports                             |
+| `transports`        | `TransportEntry[]`                                                          | Yes      |                      | Array of transport configurations                                 |
+| `maxRetries`        | `number`                                                                    | No       | Number of transports | Maximum retry attempts on failure                                 |
+| `timeout`           | `number`                                                                    | No       |                      | Timeout in milliseconds for each send attempt                     |
+| `continueOnSuccess` | `boolean`                                                                   | No       | `false`              | Continue trying transports after success (selector strategy only) |
 
 ### `TransportEntry`
 
 | Property    | Type                            | Required | Default | Description                                         |
-|-------------|---------------------------------|----------|---------|-----------------------------------------------------|
+| ----------- | ------------------------------- | -------- | ------- | --------------------------------------------------- |
 | `transport` | `Transport`                     | Yes      |         | The transport instance                              |
 | `weight`    | `number`                        | No       | `1`     | Weight for weighted distribution                    |
 | `priority`  | `number`                        | No       | `0`     | Priority for priority strategy (higher = preferred) |

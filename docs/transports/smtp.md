@@ -302,7 +302,8 @@ Web Crypto API, ensuring cross-runtime compatibility (Node.js, Deno, Bun).
 
 > [!NOTE]
 > The DKIM implementation follows [RFC 6376] and [RFC 8463], supporting both
-> `rsa-sha256` (most widely used) and `ed25519-sha256` (shorter keys) algorithms.
+> `rsa-sha256` (most widely used) and `ed25519-sha256` (shorter keys)
+> algorithms.
 
 [RFC 6376]: https://www.rfc-editor.org/rfc/rfc6376
 [RFC 8463]: https://www.rfc-editor.org/rfc/rfc8463
@@ -343,7 +344,7 @@ The `signingDomain` should match your email's From address domain, and the
 Each signature in the `signatures` array can have the following options:
 
 | Option             | Type                               | Default                             | Description                           |
-|--------------------|------------------------------------|-------------------------------------|---------------------------------------|
+| ------------------ | ---------------------------------- | ----------------------------------- | ------------------------------------- |
 | `signingDomain`    | `string`                           | (required)                          | Domain for DKIM key (d= tag)          |
 | `selector`         | `string`                           | (required)                          | DKIM selector (s= tag)                |
 | `privateKey`       | `string \| CryptoKey`              | (required)                          | Private key (PEM string or CryptoKey) |
@@ -476,7 +477,8 @@ const transport = new SmtpTransport({
 ~~~~
 
 With `onSigningFailure: "send-unsigned"`, the email will be sent without
-a DKIM signature if signing fails, rather than failing the entire send operation.
+a DKIM signature if signing fails, rather than failing the entire send
+operation.
 
 
 Bulk email sending
@@ -567,7 +569,7 @@ const testTransport = new SmtpTransport({
 ~~~~
 
 > [!TIP]
->  [Mailpit] is an excellent development SMTP server that provides a modern
+> [Mailpit] is an excellent development SMTP server that provides a modern
 > web interface for testing email functionality.  It acts as an SMTP server
 > that accepts all emails but doesn't deliver them, instead storing them
 > locally for inspection.  Mailpit offers features like HTML and plain text

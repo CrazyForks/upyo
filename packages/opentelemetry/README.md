@@ -14,10 +14,10 @@ existing code. It follows the decorator pattern, accepting any transport and
 adding standardized observability features including email delivery metrics,
 latency histograms, error classification, and distributed tracing support.
 
-[JSR]: https://jsr.io/@upyo/opentelemetry
 [JSR badge]: https://jsr.io/badges/@upyo/opentelemetry
-[npm]: https://www.npmjs.com/package/@upyo/opentelemetry
+[JSR]: https://jsr.io/@upyo/opentelemetry
 [npm badge]: https://img.shields.io/npm/v/@upyo/opentelemetry?logo=npm
+[npm]: https://www.npmjs.com/package/@upyo/opentelemetry
 [Upyo]: https://upyo.org/
 
 
@@ -31,7 +31,7 @@ Features
  -  Distributed tracing: Automatic span creation with semantic attributes
     following OpenTelemetry conventions
  -  Error classification: Intelligent categorization of email delivery failures
-    (auth, rate_limit, network, etc.)
+    (auth, rate\_limit, network, etc.)
  -  Performance optimized: Configurable sampling rates and feature toggles for
     minimal overhead
  -  Cross-runtime compatible: Works on Node.js, Deno, Bun, and edge functions
@@ -144,9 +144,10 @@ try {
 
 **Disposal Priority:**
 
-1. If wrapped transport supports `AsyncDisposable` → calls `[Symbol.asyncDispose]()`
-2. If wrapped transport supports `Disposable` → calls `[Symbol.dispose]()`
-3. If wrapped transport supports neither → no-op (no error thrown)
+1.  If wrapped transport supports `AsyncDisposable` → calls
+    `[Symbol.asyncDispose]()`
+2.  If wrapped transport supports `Disposable` → calls `[Symbol.dispose]()`
+3.  If wrapped transport supports neither → no-op (no error thrown)
 
 
 Configuration
@@ -426,10 +427,10 @@ Cross-Runtime Compatibility
 
 This package works across all JavaScript runtimes:
 
-- **Node.js**: Full OpenTelemetry ecosystem support
-- **Deno**: Native ESM and web standards compatibility
-- **Bun**: High-performance runtime optimizations
-- **Edge functions**: Minimal overhead for serverless environments
+ -  **Node.js**: Full OpenTelemetry ecosystem support
+ -  **Deno**: Native ESM and web standards compatibility
+ -  **Bun**: High-performance runtime optimizations
+ -  **Edge functions**: Minimal overhead for serverless environments
 
 Resource cleanup is handled automatically via `AsyncDisposable` when supported:
 

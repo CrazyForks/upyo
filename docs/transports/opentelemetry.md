@@ -9,18 +9,20 @@ OpenTelemetry
 
 *This transport is introduced in Upyo 0.2.0.*
 
-[OpenTelemetry] is the leading open source observability framework for cloud-native
-software, providing comprehensive standards for collecting, processing, and
-exporting telemetry data including traces, metrics, and logs.  OpenTelemetry
-enables you to instrument your applications with vendor-neutral observability,
-allowing you to monitor performance, track distributed requests, and analyze
-system behavior across different environments and observability backends.
+[OpenTelemetry] is the leading open source observability framework for
+cloud-native software, providing comprehensive standards for collecting,
+processing, and exporting telemetry data including traces, metrics, and logs.
+OpenTelemetry enables you to instrument your applications with vendor-neutral
+observability, allowing you to monitor performance, track distributed requests,
+and analyze system behavior across different environments and observability
+backends.
 
-Upyo provides seamless OpenTelemetry integration through the *@upyo/opentelemetry*
-package, which acts as a decorator around any existing email transport to add
-automatic tracing and metrics collection without requiring code changes.
-This zero-configuration observability makes it easy to monitor email delivery
-performance, track failures, and analyze usage patterns across your application.
+Upyo provides seamless OpenTelemetry integration through the
+*@upyo/opentelemetry* package, which acts as a decorator around any existing
+email transport to add automatic tracing and metrics collection without
+requiring code changes. This zero-configuration observability makes it easy to
+monitor email delivery performance, track failures, and analyze usage patterns
+across your application.
 
 > [!TIP]
 > The OpenTelemetry transport is a decorator that wraps existing transports,
@@ -441,10 +443,10 @@ const transport = createOpenTelemetryTransport(
 
 Error classifications appear in both metrics and trace data, allowing you to:
 
-- Monitor error rates by category in dashboards
-- Set up targeted alerts for specific error types
-- Analyze error patterns across different email types
-- Identify systematic issues vs. temporary problems
+ -  Monitor error rates by category in dashboards
+ -  Set up targeted alerts for specific error types
+ -  Analyze error patterns across different email types
+ -  Identify systematic issues vs. temporary problems
 
 The default classifier recognizes common email error patterns including
 authentication failures, rate limiting, network issues, validation errors,
@@ -452,7 +454,7 @@ and server problems.
 
 
 Custom attributes and context
-------------------------------
+-----------------------------
 
 You can enhance telemetry data with custom attributes that provide additional
 context about your email operations.  This is particularly useful for
@@ -492,10 +494,10 @@ const transport = createOpenTelemetryTransport(
 
 Custom attributes appear in both traces and metrics, enabling you to:
 
-- Filter and group telemetry data by business context
-- Correlate email performance with deployment versions
-- Track different email campaigns or types separately
-- Add environment-specific context for debugging
+ -  Filter and group telemetry data by business context
+ -  Correlate email performance with deployment versions
+ -  Track different email campaigns or types separately
+ -  Add environment-specific context for debugging
 
 
 Bulk email monitoring
@@ -734,7 +736,7 @@ const testTransport = createOpenTelemetryTransport(
 
 The observability data from development and testing helps you:
 
-- Validate that instrumentation is working correctly
-- Test error handling and classification logic
-- Verify that custom attributes are being applied properly
-- Optimize observability configuration before production deployment
+ -  Validate that instrumentation is working correctly
+ -  Test error handling and classification logic
+ -  Verify that custom attributes are being applied properly
+ -  Optimize observability configuration before production deployment

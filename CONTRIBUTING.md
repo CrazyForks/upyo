@@ -19,14 +19,14 @@ Upyo is a monorepo that uses [pnpm] for Node.js package management and [Deno]
 for runtime and tooling (linting, formatting, testing). To get started,
 you'll need to have [Node.js], [pnpm], and [Deno] installed on your system.
 
- 1. **Fork and clone the repository**
+1.  **Fork and clone the repository**
 
     ~~~~ bash
     git clone https://github.com/YOUR_USERNAME/upyo.git
     cd upyo
     ~~~~
 
- 2. **Install dependencies**
+2.  **Install dependencies**
 
     ~~~~ bash
     pnpm install
@@ -34,9 +34,9 @@ you'll need to have [Node.js], [pnpm], and [Deno] installed on your system.
 
     This will install all Node.js dependencies for the entire monorepo.
 
-[Node.js]: https://nodejs.org/
 [pnpm]: https://pnpm.io/
 [Deno]: https://deno.com/
+[Node.js]: https://nodejs.org/
 
 
 Development

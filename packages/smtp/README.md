@@ -8,10 +8,10 @@
 
 SMTP transport implementation for the [Upyo] email library.
 
-[JSR]: https://jsr.io/@upyo/smtp
 [JSR badge]: https://jsr.io/badges/@upyo/smtp
-[npm]: https://www.npmjs.com/package/@upyo/smtp
+[JSR]: https://jsr.io/@upyo/smtp
 [npm badge]: https://img.shields.io/npm/v/@upyo/smtp?logo=npm
+[npm]: https://www.npmjs.com/package/@upyo/smtp
 [Upyo]: https://upyo.org/
 
 
@@ -101,7 +101,7 @@ Configuration options
 ### `SmtpConfig`
 
 | Option              | Type             | Default       | Description                      |
-|---------------------|------------------|---------------|----------------------------------|
+| ------------------- | ---------------- | ------------- | -------------------------------- |
 | `host`              | `string`         |               | SMTP server hostname             |
 | `port`              | `number`         | `587`         | SMTP server port                 |
 | `secure`            | `boolean`        | `true`        | Use TLS/SSL connection           |
@@ -117,7 +117,7 @@ Configuration options
 ### `SmtpAuth`
 
 | Option   | Type                               | Default   | Description |
-|----------|------------------------------------|-----------|-------------|
+| -------- | ---------------------------------- | --------- | ----------- |
 | `user`   | `string`                           |           | Username    |
 | `pass`   | `string`                           |           | Password    |
 | `method` | `"plain" \| "login" \| "cram-md5"` | `"plain"` | Auth method |
@@ -151,15 +151,15 @@ const transport = new SmtpTransport({
 
 ### `DkimConfig`
 
-| Option             | Type                           | Default   | Description                           |
-|--------------------|--------------------------------|-----------|---------------------------------------|
-| `signatures`       | `DkimSignature[]`              |           | Array of DKIM signature configs       |
-| `onSigningFailure` | `"throw" \| "send-unsigned"`   | `"throw"` | Action when signing fails             |
+| Option             | Type                         | Default   | Description                     |
+| ------------------ | ---------------------------- | --------- | ------------------------------- |
+| `signatures`       | `DkimSignature[]`            |           | Array of DKIM signature configs |
+| `onSigningFailure` | `"throw" \| "send-unsigned"` | `"throw"` | Action when signing fails       |
 
 ### `DkimSignature`
 
 | Option             | Type                               | Default             | Description                             |
-|--------------------|------------------------------------|---------------------|-----------------------------------------|
+| ------------------ | ---------------------------------- | ------------------- | --------------------------------------- |
 | `signingDomain`    | `string`                           |                     | Domain for DKIM key (d= tag)            |
 | `selector`         | `string`                           |                     | DKIM selector (s= tag)                  |
 | `privateKey`       | `string \| CryptoKey`              |                     | Private key (PEM string or `CryptoKey`) |

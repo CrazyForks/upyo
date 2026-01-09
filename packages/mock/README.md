@@ -6,12 +6,13 @@
 [![JSR][JSR badge]][JSR]
 [![npm][npm badge]][npm]
 
-Mock transport for the [Upyo] email library - perfect for testing email functionality without actually sending emails.
+Mock transport for the [Upyo] email library - perfect for testing email
+functionality without actually sending emails.
 
-[JSR]: https://jsr.io/@upyo/mock
 [JSR badge]: https://jsr.io/badges/@upyo/mock
-[npm]: https://www.npmjs.com/package/@upyo/mock
+[JSR]: https://jsr.io/@upyo/mock
 [npm badge]: https://img.shields.io/npm/v/@upyo/mock?logo=npm
+[npm]: https://www.npmjs.com/package/@upyo/mock
 [Upyo]: https://upyo.org/
 
 

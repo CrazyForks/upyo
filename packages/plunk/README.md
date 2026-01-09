@@ -8,10 +8,10 @@
 
 [Plunk] transport for the [Upyo] email library.
 
-[JSR]: https://jsr.io/@upyo/plunk
 [JSR badge]: https://jsr.io/badges/@upyo/plunk
-[npm]: https://www.npmjs.com/package/@upyo/plunk
+[JSR]: https://jsr.io/@upyo/plunk
 [npm badge]: https://img.shields.io/npm/v/@upyo/plunk?logo=npm
+[npm]: https://www.npmjs.com/package/@upyo/plunk
 [Plunk]: https://www.useplunk.com/
 [Upyo]: https://upyo.org/
 
